@@ -85,6 +85,7 @@ public class MyQuestionActivity extends BaseActivity {
                 // TODO Auto-generated method stub
                 Log.i("MyQuestion", response);
                 try {
+                    
                     Gson gson = new Gson();
                     MyQuestionBean resultUser = gson.fromJson(response, MyQuestionBean.class);
                     if (resultUser.getStatus() == 1) {
