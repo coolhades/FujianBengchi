@@ -17,6 +17,7 @@ public class DuihuaListViewAdapter extends BaseAdapter{
 
 
 	List<QuestionReplyListBean.DataBean.AnswerBean> list;
+//List<QuestionListBean.DataBean> list;
 	Context mContext;
 
 

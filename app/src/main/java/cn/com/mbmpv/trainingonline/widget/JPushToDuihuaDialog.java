@@ -42,6 +42,7 @@ public class JPushToDuihuaDialog extends BaseActivity {
      TextView mOk;*/
 
     List<QuestionReplyListBean.DataBean.AnswerBean> lists;
+//    List<QuestionListBean.DataBean> lists;
     ListView listView;
 
     ImageView back;
@@ -95,7 +96,7 @@ public class JPushToDuihuaDialog extends BaseActivity {
     }
 
     public void getData(final String page) {
-        StringRequest rq = new StringRequest(Request.Method.POST, ConstantSet.homeAddress + "comment/getanswerlist?", new Response.Listener<String>() {
+        StringRequest rq = new StringRequest(Request.Method.POST, ConstantSet.homeAddress + "comment/getanswerlistnew?", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -116,6 +117,19 @@ public class JPushToDuihuaDialog extends BaseActivity {
                         adapter = new DuihuaListViewAdapter(lists, JPushToDuihuaDialog.this);
                         listView.setAdapter(adapter);
                     }
+
+//                    Log.i("TAGTAG", "会话列表"+response);
+//                    Gson gson = new Gson();
+//
+//                    QuestionListBean result = gson.fromJson(response, new TypeToken<QuestionListBean>() {
+//                    }.getType());
+//
+//                    lists = result.getData();
+//                    adapter = new DuihuaListViewAdapter(lists, JPushToDuihuaDialog.this);
+//
+//                    listView.setAdapter(adapter);
+
+
                 }catch (Exception e){
 
                 }

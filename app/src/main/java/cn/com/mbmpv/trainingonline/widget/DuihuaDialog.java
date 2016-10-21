@@ -45,6 +45,7 @@ public class DuihuaDialog extends Dialog {
     Context context;
 
     List<QuestionReplyListBean.DataBean.AnswerBean> lists;
+//    List<QuestionListBean.DataBean> lists;
     ListView listView;
     
     ImageView back;
@@ -92,7 +93,7 @@ public class DuihuaDialog extends Dialog {
 
     private void initData() {
 
-        lists = new ArrayList<QuestionReplyListBean.DataBean.AnswerBean>();
+        lists = new ArrayList<>();
 
         getData("1");
     }
@@ -115,14 +116,15 @@ public class DuihuaDialog extends Dialog {
 
 
     public void getData(final String page) {
-        StringRequest rq = new StringRequest(Request.Method.POST, ConstantSet.homeAddress + "comment/getanswerlist?", new Response.Listener<String>() {
+        StringRequest rq = new StringRequest(Request.Method.POST, ConstantSet.homeAddress + "comment/getanswerlistnew?", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
                 // TODO Auto-generated method stub
                     Log.i("TAGTAG", "会话列表"+response);
-                    Gson gson = new Gson();
+
                     try {
+                        Gson gson = new Gson();
                         QuestionReplyListBean result = gson.fromJson(response, new TypeToken<QuestionReplyListBean>() {
                         }.getType());
                         if (result.getStatus() == 1) {
@@ -137,6 +139,17 @@ public class DuihuaDialog extends Dialog {
                             adapter = new DuihuaListViewAdapter(lists, context);
                             listView.setAdapter(adapter);
                         }
+
+
+//                        Gson gson = new Gson();
+//
+//                        QuestionListBean result = gson.fromJson(response, new TypeToken<QuestionListBean>() {
+//                        }.getType());
+//
+//                        lists = result.getData();
+//                        adapter = new DuihuaListViewAdapter(lists,context);
+//
+//                        listView.setAdapter(adapter);
                     }catch (Exception e){
 
                     }

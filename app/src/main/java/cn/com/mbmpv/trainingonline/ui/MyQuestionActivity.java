@@ -78,7 +78,7 @@ public class MyQuestionActivity extends BaseActivity {
 
 
     public void getData() {
-        StringRequest rq = new StringRequest(Request.Method.POST, ConstantSet.homeAddress + "user/getmyquestions?", new Response.Listener<String>() {
+        StringRequest rq = new StringRequest(Request.Method.POST, ConstantSet.homeAddress + "user/getmyquestionsnew?", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -99,7 +99,6 @@ public class MyQuestionActivity extends BaseActivity {
                 } catch (Exception e) {
                     Toast.makeText(MyQuestionActivity.this, "网络请求失败", Toast.LENGTH_SHORT).show();
                 }
-
             }
         }, new Response.ErrorListener() {
 
