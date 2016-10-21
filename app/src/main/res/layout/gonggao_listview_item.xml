@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gonggao_ly"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    tools:context="cn.com.mbmpv.trainingonline.ui.SettingActivity">
+
+
+    <cn.com.mbmpv.trainingonline.widget.CircularImage
+        android:id="@+id/headview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:src="@mipmap/userheadernomol"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="10"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_gonggao"
+                android:padding="8dp"
+                android:text="Title"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/date_create"
+            android:text="ssss"
+            android:textSize="12sp"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/content_gonggao"
+            android:text="Contents"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#E6E6E6"/>
+
+</LinearLayout>

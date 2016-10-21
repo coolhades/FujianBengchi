@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6E6"
+    android:orientation="vertical"
+    tools:context="cn.com.mbmpv.trainingonline.ui.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/back_img"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="我的考试"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:layout_marginRight="20dp"
+            android:textColor="#484848"/>
+        <ImageView
+            android:id="@+id/guide_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:visibility="visible"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/guide_icon"/>
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/my_examine_listview"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/empty_layout"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:text="暂无考试"
+            android:gravity="center"
+            android:textColor="@color/hint_foreground_material_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+
+</LinearLayout>

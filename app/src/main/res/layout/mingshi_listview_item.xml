@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="#FFFFFF" 
+                android:padding="10dp"
+              android:layout_height="match_parent">
+    
+    <ImageView
+        android:id="@+id/head_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:paddingLeft="20dp"
+        android:layout_toRightOf="@id/head_img"
+        android:textColor="#414141"
+        android:text="绽放十大撒法"/>
+
+    <TextView
+        android:id="@+id/tip1"
+        android:layout_below="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/kuang_bg"
+        android:layout_toRightOf="@id/head_img"
+        android:textColor="#414141"
+        android:text="销售技巧"/>
+
+    <TextView
+        android:id="@+id/tip2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="14sp"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/kuang_bg"
+        android:layout_toRightOf="@id/tip1"
+        android:textColor="#414141"
+        android:text="汽车金融"/>
+    
+    <ImageView
+        android:id="@+id/next_bt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35dp"
+        android:src="@mipmap/right_img"/>
+    
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#E6E6E6"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/head_img"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/head_img"/>
+
+</RelativeLayout>

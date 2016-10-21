@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="#FFFFFF"
+    android:id="@+id/expanditem_ly"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <View
+        android:id="@+id/shuxian"
+        android:layout_width="4dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="10dp"
+        android:background="#333333"
+        android:layout_gravity="center_vertical"/>
+    
+    <TextView
+        android:id="@+id/text"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:paddingLeft="5dp"
+        android:text="我是父亲"
+        android:gravity="center_vertical"
+        android:textColor="#333333"/>
+
+</LinearLayout>

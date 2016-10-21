@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="cn.com.mbmpv.trainingonline.ui.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/back_img"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="关于我们"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="#484848"/>
+
+        <View
+            android:layout_width="35dp"
+            android:layout_height="1dp"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6"
+       />
+    
+  
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    
+    
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/icon"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="电话：0591-22799999-5109"
+        android:textColor="#484848"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="4dp"
+        android:text="邮箱：sales_training@fujianbenz.com"
+        android:textColor="#484848"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="4dp"
+        android:text="福建省福州市青口投资区奔驰大道1号"
+        android:textColor="#484848"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:id="@+id/view" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#484848"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="30dp"
+        android:text="CopyRight By 福建奔驰汽车工业有限公司"/>
+    
+
+</LinearLayout>

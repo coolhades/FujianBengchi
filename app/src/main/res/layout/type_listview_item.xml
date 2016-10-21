@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#FFFFFF"
+              android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#E6E6E6"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/teacher_and_date"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/yan_img"/>
+        <TextView
+            android:id="@+id/renqi_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:textColor="#333333"
+            android:layout_gravity="center_vertical"
+            android:text="人气1122"/>
+
+        <TextView
+            android:id="@+id/keshi_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="5dp"
+            android:textColor="#333333"
+            android:layout_gravity="center_vertical"
+            android:text="12课时"/>
+
+        <TextView
+            android:id="@+id/price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="15sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:textColor="#FF4056"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:text="￥1000.00"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

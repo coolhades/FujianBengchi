@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:minWidth="400dp"
+              android:background="#FFFFFF"
+              android:layout_height="wrap_content">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#A3A4A5"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:text="分享"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A3A4A5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+        
+        
+        <ImageView
+            android:id="@+id/wx_bt"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@mipmap/wx_img"/>
+
+
+        <ImageView
+            android:id="@+id/wx_friend_bt"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@mipmap/wx_friend"/>
+
+
+        <ImageView
+            android:id="@+id/sina_bt"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@mipmap/sina_img"/>
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A3A4A5"/>
+    
+    
+    <ImageView
+        android:id="@+id/close_dialog"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/cancel_img"/>
+    
+
+</LinearLayout>

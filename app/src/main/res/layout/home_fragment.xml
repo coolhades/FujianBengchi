@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="#FFFFFF"
+              android:layout_height="match_parent">
+    
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+      <!-- 第一块-->
+       <com.cjj.MaterialRefreshLayout
+           xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/refresh"
+           app:overlay="true"
+           app:wave_show="true"
+           app:wave_color="#90ffffff"
+           app:progress_colors="@array/material_colors"
+           app:wave_height_type="higher"
+           >
+     <ListView
+         android:id="@+id/home_fragment_listview"
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"></ListView>
+
+       </com.cjj.MaterialRefreshLayout>
+
+       <!-- 第一块-->
+       
+       
+      <!-- 第三块-->
+
+
+       <!-- 第三块-->
+   </LinearLayout>
+
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:visibility="gone"
+        android:background="@drawable/search_bg"
+        android:layout_height="35dp"/>
+    
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/search_img"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4E4E4E"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:text="在所有课程中搜索"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
