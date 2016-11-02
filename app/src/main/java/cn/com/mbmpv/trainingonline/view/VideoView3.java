@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +50,7 @@ public class VideoView3 {
     Jianjie info;
     
     TextView tiwenText;
+    TextView empty_layout;
     
     Handler handler=new Handler(){
         @Override
@@ -85,6 +85,8 @@ public class VideoView3 {
         listView= (ListView) mView.findViewById(R.id.view3_listview);
 
         tiwenText= (TextView) mView.findViewById(R.id.tiwen_text);
+        empty_layout = (TextView) mView.findViewById(R.id.empty_layout);
+
     }
 
     private void initData() {
@@ -128,25 +130,27 @@ public class VideoView3 {
                     Log.i("TAGTAG", response);
                     ResultQuestion result = gson.fromJson(response, new TypeToken<ResultQuestion>() {
                     }.getType());
+                    if (result.getData().isEmpty()){
+                        empty_layout.setVisibility(View.VISIBLE);
+                        listView.setVisibility(View.INVISIBLE);
+                    }else {
+                        empty_layout.setVisibility(View.INVISIBLE);
+                        listView.setVisibility(View.VISIBLE);
+                        lists.clear();
+                        lists.addAll(result.getData());
+                        if (adapter == null) {
+                            adapter = new VideoView3ListViewAdapter(lists, mContext);
 
-                    lists.clear();
-                    lists.addAll(result.getData());
-                    if(adapter==null) {
-                        adapter = new VideoView3ListViewAdapter(lists, mContext);
+                            listView.setAdapter(adapter);
+                        } else {
+                            adapter.notifyDataSetChanged();
+                        }
 
-                        listView.setAdapter(adapter);
+//                        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) listView.getLayoutParams();
+//
+//                        params.height = (int) (lists.size() * ((120 * mContext.getResources().getDisplayMetrics().density) + 0.5f));
+//                        listView.setLayoutParams(params);
                     }
-                    else
-                    {
-                        adapter.notifyDataSetChanged();
-                    }
-
-                    LinearLayout.LayoutParams params= (LinearLayout.LayoutParams) listView.getLayoutParams();
-
-                    params.height=(int)(lists.size()*((120*mContext.getResources().getDisplayMetrics().density)+0.5f));
-                    listView.setLayoutParams(params);
-
-
                 }
             }
         }, new Response.ErrorListener() {

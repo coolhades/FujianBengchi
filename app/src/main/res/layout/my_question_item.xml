@@ -13,10 +13,7 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <cn.com.mbmpv.trainingonline.widget.CircularImage
-            android:id="@+id/head_img"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -29,12 +26,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <cn.com.mbmpv.trainingonline.widget.CircularImage
+                    android:id="@+id/head_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
                 <TextView
                     android:id="@+id/title_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="4dp"
                     android:text="张三"
                     android:textColor="#3A3A3A"
                     android:textSize="14sp" />
@@ -60,11 +62,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:paddingLeft="10dp"
+                android:paddingLeft="2dp"
                 android:text="sss"
                 android:layout_marginBottom="4dp"
                 android:textColor="#3A3A3A"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
 
@@ -72,10 +74,11 @@
 
     <View
         android:id="@+id/line"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:background="#cdcdcd"
         android:layout_width="match_parent"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="2dp"
         android:layout_height="1dp"/>
 
     <LinearLayout
@@ -88,15 +91,16 @@
 
         <cn.com.mbmpv.trainingonline.widget.CircularImage
             android:id="@+id/headImg"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:visibility="gone"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="15dp"
             android:orientation="vertical">
 
@@ -123,7 +127,7 @@
                     android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:text=""
                     android:textColor="#AEAEAE" />
             </LinearLayout>
@@ -139,7 +143,9 @@
                 android:textSize="14sp" />
 
             <View
-                android:layout_width="300dp"
+                android:id="@+id/line1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#cdcdcd" />
         </LinearLayout>

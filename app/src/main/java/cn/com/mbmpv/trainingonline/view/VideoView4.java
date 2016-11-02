@@ -227,8 +227,11 @@ public class VideoView4 {
                     lists=resultUser.getData();
                     if (!lists.isEmpty()){
                         count = lists.size();
+                        kaoshi_num.setText(" "+count+"场考试");
+                    }else {
+                        kaoshi_num.setText("暂无考试");
                     }
-                    kaoshi_num.setText(" "+count+"场考试");
+
 
                     if (count == 0){
                         kaoshiBt.setClickable(false);

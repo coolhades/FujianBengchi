@@ -52,7 +52,7 @@ public class DuihuaDialog extends Dialog {
 
     DuihuaListViewAdapter adapter;
 
-    ImageView headImg;
+    CircularImage headImg;
     TextView userNick;
     TextView dateText;
     TextView question_title;
@@ -84,7 +84,7 @@ public class DuihuaDialog extends Dialog {
         listView = (ListView) findViewById(R.id.list_view);
         back= (ImageView) findViewById(R.id.back);
 
-        headImg= (ImageView) findViewById(R.id.head_img);
+        headImg= (CircularImage) findViewById(R.id.head_img);
         userNick= (TextView) findViewById(R.id.user_nick);
         dateText= (TextView) findViewById(R.id.date);
 

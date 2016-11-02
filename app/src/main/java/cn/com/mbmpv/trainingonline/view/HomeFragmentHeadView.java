@@ -3,6 +3,7 @@ package cn.com.mbmpv.trainingonline.view;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
@@ -29,7 +30,7 @@ import cn.com.mbmpv.trainingonline.adapter.HomeTopPagerAdapter;
 import cn.com.mbmpv.trainingonline.application.MyApplication;
 import cn.com.mbmpv.trainingonline.bean.Banner;
 import cn.com.mbmpv.trainingonline.bean.GongGaoBean;
-import cn.com.mbmpv.trainingonline.ui.GongGaoActivity;
+import cn.com.mbmpv.trainingonline.ui.GongGaoDetailActivity;
 import cn.com.mbmpv.trainingonline.ui.TypeActivity;
 import cn.com.mbmpv.trainingonline.ui.VideoActivity;
 import cn.com.mbmpv.trainingonline.ui.VideoActivityFirst;
@@ -352,8 +353,19 @@ public class HomeFragmentHeadView implements View.OnClickListener {
                 @Override
                 public void onItemClick(int position) {
                     // TO DO
-                    Intent i = new Intent(mContext, GongGaoActivity.class);
+                    //跳转查看具体公告
+                    //传Bundle
+                    Bundle bundle = new Bundle();
+                    bundle.putString("title", announcelists.get(position).getTitle());
+                    bundle.putString("content", announcelists.get(position).getContent());
+                    bundle.putString("data", announcelists.get(position).getDate_create());
+                    Intent i = new Intent(mContext,GongGaoDetailActivity.class);
+                    i.putExtras(bundle);
                     mContext.startActivity(i);
+
+//                    Intent i = new Intent(mContext, GongGaoActivity.class);
+//                    mContext.startActivity(i);
+
                 }
             });
 
@@ -371,8 +383,17 @@ public class HomeFragmentHeadView implements View.OnClickListener {
                 @Override
                 public void onItemClick(int position) {
                     // TO DO
-                    Intent i = new Intent(mContext, GongGaoActivity.class);
+                    //跳转查看具体公告
+                    //传Bundle
+                    Bundle bundle = new Bundle();
+                    bundle.putString("title", announcelists.get(position).getTitle());
+                    bundle.putString("content", announcelists.get(position).getContent());
+                    bundle.putString("data", announcelists.get(position).getDate_create());
+                    Intent i = new Intent(mContext,GongGaoDetailActivity.class);
+                    i.putExtras(bundle);
                     mContext.startActivity(i);
+//                    Intent i = new Intent(mContext, GongGaoActivity.class);
+//                    mContext.startActivity(i);
                 }
             });
 

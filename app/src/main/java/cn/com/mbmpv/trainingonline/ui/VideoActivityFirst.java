@@ -68,7 +68,7 @@ public class VideoActivityFirst extends BaseActivity {
         setContentView(R.layout.activity_video_first);
         initView();
         initData();
-//        initEvent();
+        initEvent();
 
     }
 

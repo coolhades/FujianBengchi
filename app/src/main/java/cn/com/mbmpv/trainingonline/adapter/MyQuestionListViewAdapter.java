@@ -149,6 +149,7 @@ public class MyQuestionListViewAdapter extends BaseAdapter {
 
         LinearLayout reply_ly;
         View line;
+        View line1;
 
 
     }

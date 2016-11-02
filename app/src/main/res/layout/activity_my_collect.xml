@@ -25,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="收藏的课程"
+            android:text="收藏课程"
             android:layout_weight="1"
             android:textSize="16sp"
             android:textColor="#484848"/>

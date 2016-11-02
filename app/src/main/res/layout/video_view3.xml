@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:background="#FFFFFF"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/view3_listview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></ListView>
+        <TextView
+            android:id="@+id/empty_layout"
+            android:text="暂无提问"
+            android:layout_above="@+id/tiwen_text"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#E6E6E6"/>
+
+            <ListView
+                android:layout_above="@+id/tiwen_text"
+                android:id="@+id/view3_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </ListView>
+
+
+            <View
+                android:layout_below="@+id/view3_listview"
+                android:layout_above="@+id/tiwen_text"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E6E6E6"/>
+
 
     <TextView
         android:id="@+id/tiwen_text"
@@ -28,7 +46,7 @@
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
         android:gravity="center"
-        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/login_bg"/>
 
-</LinearLayout>
+</RelativeLayout>

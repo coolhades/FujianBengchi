@@ -23,8 +23,8 @@ android {
         applicationId "cn.com.mbmpv.trainingonline"
         minSdkVersion 19
         targetSdkVersion 22
-        versionCode 25
-        versionName "2.5"
+        versionCode 27
+        versionName "2.5.2"
         signingConfig signingConfigs.config
 
     }

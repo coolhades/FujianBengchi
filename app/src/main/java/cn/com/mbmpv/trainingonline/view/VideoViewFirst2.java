@@ -105,11 +105,11 @@ public class VideoViewFirst2 {
             Log.i("TAGTAG", "调用了！");
             //去看视频
 
-//            mContext.startActivity(new Intent(mContext, VideoActivity.class));
-//            ((VideoActivityFirst) mContext).finish();
+            mContext.startActivity(new Intent(mContext, VideoActivity.class));
+            ((VideoActivityFirst) mContext).finish();
             //改版  我的课程 不显示继续学习
 //            joinLesson.setVisibility(View.INVISIBLE);
-            joinLesson.setText("继续学习");
+//            joinLesson.setText("继续学习");
         }
 
 

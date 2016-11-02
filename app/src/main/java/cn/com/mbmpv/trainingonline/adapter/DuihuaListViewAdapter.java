@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -12,6 +11,7 @@ import java.util.List;
 import cn.com.mbmpv.trainingonline.R;
 import cn.com.mbmpv.trainingonline.bean.QuestionReplyListBean;
 import cn.com.mbmpv.trainingonline.utils.LoadImgUtils;
+import cn.com.mbmpv.trainingonline.widget.CircularImage;
 
 public class DuihuaListViewAdapter extends BaseAdapter{
 
@@ -60,7 +60,7 @@ public class DuihuaListViewAdapter extends BaseAdapter{
 //			viewHolder.question_title= (TextView) convertView.findViewById(R.id.question_title);
 			viewHolder.reply_person= (TextView) convertView.findViewById(R.id.reply_person);
 			viewHolder.reply_content= (TextView) convertView.findViewById(R.id.reply_content);
-			viewHolder.headImg = (ImageView) convertView.findViewById(R.id.headImg);
+			viewHolder.headImg = (CircularImage) convertView.findViewById(R.id.headImg);
 			viewHolder.time = (TextView) convertView.findViewById(R.id.time);
 			convertView.setTag(viewHolder);
 		}
@@ -85,7 +85,7 @@ public class DuihuaListViewAdapter extends BaseAdapter{
 //		TextView question_title;
 		TextView reply_person;
 		TextView reply_content;
-		ImageView headImg;
+		CircularImage headImg;
 		TextView time;
 	}
 

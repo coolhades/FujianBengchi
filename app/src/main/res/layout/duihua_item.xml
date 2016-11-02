@@ -5,23 +5,23 @@
     android:layout_height="wrap_content"
     android:background="#ffffff"
     android:orientation="vertical"
-    android:padding="8dp">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
+        android:layout_marginLeft="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <ImageView
+        <cn.com.mbmpv.trainingonline.widget.CircularImage
             android:id="@+id/headImg"
+            android:visibility="gone"
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@mipmap/icon" />
+            android:layout_height="50dp" />
 
         <LinearLayout
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -51,13 +51,13 @@
                     android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
                     android:text=""
                     android:textColor="#AEAEAE" />
             </LinearLayout>
 
             <TextView
-                android:text="222222222222222222222222222222222222222222222222222222222222222222"
+                android:text=""
                 android:id="@+id/reply_content"
                 android:textColor="#3A3A3A"
                 android:textSize="14sp"
@@ -68,6 +68,7 @@
 
             <View
                 android:background="#cdcdcd"
+                android:visibility="gone"
                 android:layout_width="300dp"
                 android:layout_height="1dp"/>
         </LinearLayout>
